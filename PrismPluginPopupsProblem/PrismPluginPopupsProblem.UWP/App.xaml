@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="PrismPluginPopupsProblem.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PrismPluginPopupsProblem.UWP"
+    RequestedTheme="Light">
+
+</Application>
