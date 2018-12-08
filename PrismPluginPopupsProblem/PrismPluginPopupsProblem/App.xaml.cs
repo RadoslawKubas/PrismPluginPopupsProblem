@@ -1,5 +1,6 @@
 ﻿using Prism;
 using Prism.Ioc;
+using Prism.Plugin.Popups;
 using PrismPluginPopupsProblem.ViewModels;
 using PrismPluginPopupsProblem.Views;
 using Xamarin.Forms;
@@ -28,6 +29,8 @@ namespace PrismPluginPopupsProblem
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterPopupNavigationService();
+
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
