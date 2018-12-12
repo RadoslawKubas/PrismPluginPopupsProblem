@@ -21,11 +21,11 @@ namespace PrismPluginPopupsProblem.ViewModels
         public DelegateCommand ClearPopupStackCommand => new DelegateCommand(OnClearPopupStackExecuted);
         public DelegateCommand NavigateToPageACommand => new DelegateCommand(OnNavigateToPageAExecuted);
 
-        public DelegateCommand Issue1Command => new DelegateCommand(OnIssue1Executed);
-        public DelegateCommand Issue1ExpectedCommand => new DelegateCommand(OnIssue1ExpectedExecuted);
-        public DelegateCommand Issue2Command => new DelegateCommand(OnIssue2Executed);
+        public DelegateCommand Issue80Command => new DelegateCommand(OnIssue80Executed);
+        public DelegateCommand Issue80ExpectedCommand => new DelegateCommand(OnIssue80ExpectedExecuted);
+        public DelegateCommand Issue2Command => new DelegateCommand(OnIssue81Executed);
 
-        private void OnIssue1ExpectedExecuted()
+        private void OnIssue80ExpectedExecuted()
         {
             ShowPopup(title: "PopupA", color: Color.LightBlue, padding: new Thickness(150, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: true);
             ShowPopup(title: "PopupB", color: Color.LightCoral, padding: new Thickness(50, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: true);
@@ -33,7 +33,7 @@ namespace PrismPluginPopupsProblem.ViewModels
             ShowPopup(title: "this example may stop working\nin the future version of Rg.Popups", color: Color.LightGray, padding: new Thickness(50, 160, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: true);
         }
 
-        private async void OnIssue2Executed()
+        private async void OnIssue81Executed()
         {
             ShowPopup(title: "PopupA", color: Color.LightBlue, padding: new Thickness(150, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: false);
             ShowPopup(title: "PopupB", color: Color.LightCoral, padding: new Thickness(50, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: false);
@@ -45,7 +45,7 @@ namespace PrismPluginPopupsProblem.ViewModels
             await ShowExceptionIfOccured(result);
         }
 
-        private async void OnIssue1Executed()
+        private async void OnIssue80Executed()
         {
             ShowPopup(title: "PopupA", color: Color.LightBlue, padding: new Thickness(150, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: false);
             ShowPopup(title: "PopupB", color: Color.LightCoral, padding: new Thickness(50, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: false);

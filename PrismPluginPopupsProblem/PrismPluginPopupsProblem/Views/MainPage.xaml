@@ -16,15 +16,15 @@
         <Button Text="NavigateAsync(&quot;PageA&quot;)"
                 Command="{Binding NavigateToPageACommand}"/>
 
-        <Button Text="Issue #1 - ClearPopupAsync throw exception"
-                Command="{Binding Issue1Command}"
+        <Button Text="Issue #80 - ClearPopupAsync throw exception"
+                Command="{Binding Issue80Command}"
                 FontSize="Small"/>
 
-        <Button Text="Issue #1.1 - Expected behavior simulation"
-                Command="{Binding Issue1ExpectedCommand}"
+        <Button Text="Issue #80.1 - Expected behavior simulation"
+                Command="{Binding Issue80ExpectedCommand}"
                 FontSize="Small"/>
 
-        <Button Text="Issue #2 - Navigating to other page close popups without animation and start after navigation finish"
+        <Button Text="Issue #81 - Navigating to other page close popups without animation and start after navigation finish"
                 Command="{Binding Issue2Command}"
                 FontSize="Small"/>
 
