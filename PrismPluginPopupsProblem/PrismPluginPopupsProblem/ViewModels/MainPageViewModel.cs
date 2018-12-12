@@ -23,7 +23,22 @@ namespace PrismPluginPopupsProblem.ViewModels
 
         public DelegateCommand Issue80Command => new DelegateCommand(OnIssue80Executed);
         public DelegateCommand Issue80ExpectedCommand => new DelegateCommand(OnIssue80ExpectedExecuted);
-        public DelegateCommand Issue2Command => new DelegateCommand(OnIssue81Executed);
+        public DelegateCommand Issue81Command => new DelegateCommand(OnIssue81Executed);
+        public DelegateCommand Issue81ExpectedCommand => new DelegateCommand(OnIssue81ExpectedExecuted);
+
+        private async void OnIssue81ExpectedExecuted()
+        {
+            ShowPopup(title: "PopupA", color: Color.LightBlue, padding: new Thickness(150, 50, 0, 0), backgroundInputTransparent: true, closeWhenBackgroundIsClicked: false);
+
+            await Task.Delay(2000);
+
+            NavigationService.GoBackAsync();
+
+            var result = await NavigationService.NavigateAsync(nameof(PageA));
+
+            await ShowExceptionIfOccured(result);
+
+        }
 
         private void OnIssue80ExpectedExecuted()
         {

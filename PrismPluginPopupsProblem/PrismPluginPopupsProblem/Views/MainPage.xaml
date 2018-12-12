@@ -25,7 +25,11 @@
                 FontSize="Small"/>
 
         <Button Text="Issue #81 - Navigating to other page close popups without animation and start after navigation finish"
-                Command="{Binding Issue2Command}"
+                Command="{Binding Issue81Command}"
+                FontSize="Small"/>
+
+        <Button Text="Issue $81.1 - Expected behavior simulation"
+                Command="{Binding Issue81ExpectedCommand}"
                 FontSize="Small"/>
 
     </StackLayout>
