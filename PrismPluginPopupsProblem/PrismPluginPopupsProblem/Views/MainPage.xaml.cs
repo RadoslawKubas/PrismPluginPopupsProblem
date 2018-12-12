@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace PrismPluginPopupsProblem.Views
@@ -12,6 +13,11 @@ namespace PrismPluginPopupsProblem.Views
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
     }
 }

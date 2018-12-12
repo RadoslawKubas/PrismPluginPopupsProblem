@@ -1,11 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xaml="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
              x:Class="PrismPluginPopupsProblem.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+
+        <Button Text="NavigateAsync(&quot;PopupA&quot;)"
+                Command="{Binding NavigateToPopupACommand}"/>
+        <Button Text="NavigateAsync(&quot;PopupB&quot;)"
+                Command="{Binding NavigateToPopupBCommand}"/>
+        <Button Text="ClearPopupStackAsync"
+                Command="{Binding ClearPopupStackCommand}"/>
+        <Button Text="NavigateAsync(&quot;PageA&quot;)"
+                Command="{Binding NavigateToPageACommand}"/>
+
+        <Button Text="Issue #1 - ClearPopupAsync throw exception"
+                Command="{Binding Issue1Command}"
+                FontSize="Small"/>
+
+        <Button Text="Issue #1.1 - Expected behavior simulation"
+                Command="{Binding Issue1ExpectedCommand}"
+                FontSize="Small"/>
+
+        <Button Text="Issue #2 - Navigating to other page close popups without animation and start after navigation finish"
+                Command="{Binding Issue2Command}"
+                FontSize="Small"/>
+
     </StackLayout>
 
 </ContentPage>

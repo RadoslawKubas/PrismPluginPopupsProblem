@@ -33,6 +33,8 @@ namespace PrismPluginPopupsProblem
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<PageA, PageAViewModel>();
+            containerRegistry.RegisterForNavigation<Popup, PopupViewModel>();
         }
     }
 }
